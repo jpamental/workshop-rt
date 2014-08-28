@@ -1,0 +1,50 @@
+/* @font-face entries for the Fira Sans webfonts */
+
+@font-face {
+  font-family: "Fira Sans Bold";
+  src: url('../fonts/FiraSans/FiraSans-Bold.eot');
+  src: url('../fonts/FiraSans/FiraSans-Bold.eot?#iefix') format('eot'), url("../fonts/FiraSans/FiraSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fira Sans Bold Italic";
+  src: url('../fonts/FiraSans/FiraSans-BoldItalic.eot');
+  src: url('../fonts/FiraSans/FiraSans-BoldItalic.eot?#iefix') format('eot'), url("../fonts/FiraSans/FiraSans-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fira Sans Light";
+  src: url('../fonts/FiraSans/FiraSans-Light.eot');
+  src: url('../fonts/FiraSans/FiraSans-Light.eot?#iefix') format('eot'), url("../fonts/FiraSans/FiraSans-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fira Sans Light Italic";
+  src: url('../fonts/FiraSans/FiraSans-LightItalic.eot');
+  src: url('../fonts/FiraSans/FiraSans-LightItalic.eot?#iefix') format('eot'), url("../fonts/FiraSans/FiraSans-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fira Sans Medium";
+  src: url('../fonts/FiraSans/FiraSans-Medium.eot');
+  src: url('../fonts/FiraSans/FiraSans-Medium.eot?#iefix') format('eot'), url("../fonts/FiraSans/FiraSans-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fira Sans Medium Italic";
+  src: url('../fonts/FiraSans/FiraSans-MediumItalic.eot');
+  src: url('../fonts/FiraSans/FiraSans-MediumItalic.eot?#iefix') format('eot'), url("../fonts/FiraSans/FiraSans-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fira Sans Regular";
+  src: url('../fonts/FiraSans/FiraSans-Regular.eot');
+  src: url('../fonts/FiraSans/FiraSans-Regular.eot?#iefix') format('eot'), url("../fonts/FiraSans/FiraSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fira Sans Regular Italic";
+  src: url('../fonts/FiraSans/FiraSans-RegularItalic.eot');
+  src: url('../fonts/FiraSans/FiraSans-RegularItalic.eot?#iefix') format('eot'), url("../fonts/FiraSans/FiraSans-RegularItalic.woff") format("woff");
+}
+
