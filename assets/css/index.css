@@ -166,8 +166,8 @@ a {
 	transition: background 0.3s ease-in-out;	
 }
 
-/* redefine bold and italics for web fonts */
-
+/* redefine bold and italics for web fonts - only needed if using a service that doesn't group for you */
+/*
 strong, 
 b {
 	font-family:"Fira Sans Bold"; 
@@ -188,6 +188,7 @@ i b {
 	font-weight: normal; 
 	font-style: normal;
 }
+*/
 
 #logo {
 	width: 13.636364%; /* 120px / (960px - (2 * 40px)) = 13.636364% */

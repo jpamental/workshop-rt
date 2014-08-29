@@ -1,9 +1,6 @@
 /*global jQuery */
 
 
-// Basic FitVids Test
-$(".container").fitVids();
-
 // Typographic scale toggle function
 $(document).ready(function(e) {
 	// Type scale toggle button

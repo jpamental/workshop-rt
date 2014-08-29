@@ -1,0 +1,142 @@
+
+/* Page furniture */
+
+#page {
+	width: 95%; /* this is somewhat arbitrary - just a value that is close to full width but leaves a bit of margin */
+	max-width: 60em; /* 960px / 16px (or 1em) = 60em - adjust as you see fit! */
+}
+
+header {
+	margin: 0;
+	padding: 1em 4.1666667% 0 4.1666667%; /* 40px / 960px = 4.1666667% */
+	position: relative;
+	overflow: visible;
+}
+
+
+nav {
+    float: left;
+    width: 100%;
+    margin-left: 0;
+    margin-right: -100%; 
+}
+@media (min-width: 44em) {
+	nav {
+	    height: 3.6em; 
+	}
+}
+
+#main {
+	clear: both;
+}
+
+#content {
+	clear: right;
+	margin: 0;
+	padding: 1em 4.1666667%; /* 40px / 960px = 4.1666667% */
+	position: relative;
+}
+
+#sidebar-first {
+	margin: 0;
+	padding: 2.95em 4.1666667% 0 4.1666667%;	/* 40px / 960px = 4.1666667% */
+}
+
+footer {
+	margin: 0;
+	padding: 1em 4.1666667% 1em 4.1666667%; /* 40px / 960px = 4.1666667% */
+}
+
+
+
+
+@media screen and (min-width: 44em) { /* 704px / 16px = 44em */
+
+/* page furniture */
+
+nav {
+    height: 3.6em; 
+}
+
+#content {
+	width: 69.791667%; /* 670px / 960px = 69.791667% */
+	float: left; 
+	padding: 1em 4.1666667%; /* 40px / 960px = 4.1666667% */
+	position: relative;
+	margin-top: 3.6em;
+	margin-left: 30.208333%; /* 290px / 960px = 30.208333% % */
+	margin-right: -100%;
+}
+  
+#sidebar-first {
+	width: 30.208333%; /* 290px / 960px = 30.208333% % */
+	float: left; 
+	margin-top: 3.6em;
+	margin-right: -30.208333%; /* 290px / 960px = 30.208333% % */
+	padding: 2.95em 0 0 4.1666667%;	/* 40 / 960px = 4.1666667% */
+}
+
+
+
+  
+}/* /mediaquery */
+
+@media screen and (min-width: 58em) {  /* 928px / 16px = 58em */
+
+#page {
+	max-width: 60em;  /* 960px / 16px = 60em */
+}
+
+  
+}/* /mediaquery */
+
+@media screen and (min-width: 80.0625em) {  /* 1281px / 16px = 80.0625em */
+
+#page {
+	max-width: 87.5em; /* 1400px / 16px = 87.5em */
+}
+#content {
+	width: 78.928571%; /* 1105px / 1400px = 78.928571% */
+	float: left; 
+	padding: 1em 3.6199095%; /* 40 / 1105px = 3.6199095% */
+	margin-top: 3.6em;
+	margin-left: 21.071429%; /* 295px / 1400px = 21.071429% */
+	margin-right: -100%;
+}
+  
+#sidebar-first {
+	width: 21.071429%; /* 295px / 1400px = 21.071429% */
+	float: left; 
+	padding: 2.95em 0 0 2.8571429%;	/* 40px / 1400px = 2.8571429% */
+	margin-top: 3.6em;
+	margin-right: -21.071429%; /* 295px / 1400px = 21.071429% */
+}
+
+
+#content #main-content {
+	width: 69.683258%; /* 770px / 1105px = 69.683258% */
+	float: left;
+	padding-right: 8.6956522%; /* 60px / 690px = 8.6956522% */
+}
+  
+#content #comments {
+	width: 30.316742%; /* 335px / 1105px = 30.316742% */
+	float: left; 
+	padding-top: 1em;
+}
+
+
+
+}/* /mediaquery */
+
+
+
+
+/* the following media query is a fix for a bug in older iOS devices on rotation */
+@media screen and (orientation:landscape) and (device-width:320px) and (device-height: 480px) {
+	body {
+		width: 480px;
+	}
+}
+
+
