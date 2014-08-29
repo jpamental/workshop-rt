@@ -1,7 +1,7 @@
 
 wt.fix({
 	elements: 'p',
-	chars: 20,
+	chars: 15,
 	method: 'nbsp',
 	event: 'resize'
 });
