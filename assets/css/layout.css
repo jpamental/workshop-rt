@@ -6,7 +6,7 @@
 	max-width: 60em; /* 960px / 16px (or 1em) = 60em - adjust as you see fit! */
 }
 
-header {
+#page > header {
 	margin: 0;
 	padding: 1em 4.1666667% 0 4.1666667%; /* 40px / 960px = 4.1666667% */
 	position: relative;
@@ -42,7 +42,7 @@ nav {
 	padding: 2.95em 4.1666667% 0 4.1666667%;	/* 40px / 960px = 4.1666667% */
 }
 
-footer {
+#page > footer {
 	margin: 0;
 	padding: 1em 4.1666667% 1em 4.1666667%; /* 40px / 960px = 4.1666667% */
 }
