@@ -74,36 +74,17 @@
   background-image: linear-gradient(#fefafa, #cbc7c7);
 }
 
-.toggle-otf-features {
+.toggle-scale {
   position: fixed; 
   top: 0.5em; 
   right: 0.5em;
   z-index: 999;
 }
-.toggle-otf-features.on:after {
+.toggle-scale.on:after {
   content: ": on";
 }
-.toggle-otf-features.off:after {
+.toggle-scale.off:after {
   content: ": off";
-}
-
-/* LAYOUT changes */
-
-	#content {
-		width: 100%; 
-		margin-left: 0; 
-	}
-@media screen and (min-width: 44em) { 
-	#content {
-		width: 90%; 
-		margin-left: 10%; 
-	}
-}
-@media screen and (min-width: 58em) { 
-	#content {
-		width: 90%; 
-		margin-left: 10%; 
-	}
 }
 
 
@@ -161,7 +142,7 @@ body, caption, th, td, input, textarea, select, option, legend, fieldset {
 }
 
 h1 {
-	font-family: "Playfair Display", Georgia; 
+	font-family: "Merriweather", Georgia; 
 	font-weight: 900;
 	font-size: 3em;
 	margin: 0.6667em 0 0.33333em 0; /* 24px above, 16px below */
@@ -170,7 +151,7 @@ h1 {
 }
 
 h2 {
-	font-family: "Playfair Display", Georgia; 
+	font-family: "Merriweather", Georgia; 
 	font-weight: 700;
 	margin: 0.75em 0 0.5em 0; /* 20px above, 16px below */
 	color: #555; 
@@ -178,7 +159,7 @@ h2 {
 }
 
 h3 {
-	font-family: "Playfair Display", Georgia; 
+	font-family: "Merriweather", Georgia; 
 	font-weight: 700;
 	margin: 1em 0 0.66667em 0; /* 24px above, 16px below */
 	color: #555; 
@@ -389,7 +370,7 @@ blockquote {
 	margin: 0 auto 1em auto; 
 	font-size: 1.5em; 
 	line-height: 1.4em; 
-	font-family: "Playfair Display", Georgia, "Times New Roman"; 
+	font-family: "Merriweather", Georgia, "Times New Roman"; 
 	font-style: italic; 
 	font-weight: 700;
 	position: relative;
@@ -632,394 +613,6 @@ img {
 }
 
 /* END WEB FONTS INACTIVE styles */
-
-/* PROPORTION styles */
-
-p {
-  padding-top: 0;
-}
-@media (min-width: 44em) {
-  p {
-    max-width: 38em;
-  }
-}
-@media (min-width: 58em) {
-  p {
-    max-width: 40em;
-  }
-}
-
-h1 {
-  font-size: 2em;
-  /* 2x body copy size = 32px */
-  letter-spacing: -1px;
-  /* tighten up 'display type' headers on smaller displays */
-  line-height: 1.25;
-  /* 45px / 36px */
-  margin-top: 0.9375em;
-  /* (20px / 32px) * 1.5 */
-  margin-bottom: 0.3125em;
-  /* (20px / 32px) * .5 */
-}
-@media (min-width: 44em) {
-  h1 {
-    font-size: 2.5em;
-    /* 2.5x body copy size = 40px */
-    letter-spacing: normal;
-    line-height: 1.125;
-    /* 45px / 40px */
-    margin-top: 0.73333334em;
-    /* (22px / 45px) * 1.5 */
-    margin-bottom: 0.24444445em;
-    /* (22px / 45px) * .5 */
-    max-width: 14.4em;
-  }
-}
-@media (min-width: 58em) {
-  h1 {
-    font-size: 3em;
-    /* 3x body copy size = 48px */
-    letter-spacing: normal;
-    line-height: 1.05;
-    /* keep to a multiple of the 20px line height and something more appropriate for display headings */
-    margin-top: 0.6875em;
-    /* (22px / 48px) * 1.5 */
-    margin-bottom: 0.22916667em;
-    /* (22px / 48px) * .5 */
-    max-width: 12.66667em;
-  }
-}
-.wf-inactive h1 {
-  font-size: 2em;
-  letter-spacing: -1px;
-  line-height: 1.25;
-}
-@media (min-width: 44em) {
-  .wf-inactive h1 {
-    font-size: 2.5em;
-    letter-spacing: normal;
-    line-height: 1.125;
-  }
-}
-@media (min-width: 58em) {
-  .wf-inactive h1 {
-    font-size: 3.2em;
-    letter-spacing: -1px;
-    line-height: 1.05;
-	margin-top: 0.5875em;
-	margin-bottom: 0.22916667em;
-  }
-}
-
-h2 {
-  font-size: 1.625em;
-  /* 1.625x body copy size = 26px */
-  line-height: 1.15384615;
-  /* 30px / 26px */
-  margin-top: 1.15384616em;
-  /* (20px / 26px) * 1.5 */
-  margin-bottom: 0.38461539em;
-  /* (20px / 26px) * .5 */
-}
-@media (min-width: 44em) {
-  h2 {
-    font-size: 2em;
-    /* 2x body copy size = 32px */
-    line-height: 1.25;
-    margin-top: 1.03125em;
-    /* (22px / 32px) * 1.5 */
-    margin-bottom: 0.34375em;
-    /* (22px / 32px) * .5 */
-    max-width: 18em;
-  }
-}
-@media (min-width: 58em) {
-  h2 {
-    font-size: 2.25em;
-    /* 2.25x body copy size = 36px */
-    line-height: 1.25;
-    margin-top: 1.03125em;
-    /* (22px / 32px) * 1.5 */
-    margin-bottom: 0.34375em;
-    /* (22px / 32px) * .5 */
-    max-width: 16.88889em;
-  }
-}
-.wf-inactive h2 {
-  font-size: 1.625em;
-  letter-spacing: normal;
-  line-height: 1.15384615;
-}
-@media (min-width: 44em) {
-  .wf-inactive h2 {
-    font-size: 2em;
-    letter-spacing: normal;
-    line-height: 1.25;
-  }
-}
-@media (min-width: 58em) {
-  .wf-inactive h2 {
-    font-size: 2.25em;
-    letter-spacing: normal;
-    line-height: 1.25;
-  }
-}
-
-h3 {
-  font-size: 1.375em;
-  /* 1.375x body copy size = 22px */
-  line-height: 1.13636364;
-  /* 25px / 22px */
-  margin-top: 1.36363637em;
-  /* (20px / 22px) * 1.5 */
-  margin-bottom: 0.45454546em;
-  /* (20px / 22px) * .5 */
-}
-@media (min-width: 44em) {
-  h3 {
-    font-size: 1.5em;
-    /* 1.5x body copy size = 24px */
-    line-height: 1.25;
-    margin-top: 1.37500001em;
-    /* (22px / 24px) * 1.5 */
-    margin-bottom: 0.45833334em;
-    /* (22px / 24px) * .5 */
-    max-width: 26.18182em;
-  }
-}
-@media (min-width: 58em) {
-  h3 {
-    font-size: 1.75em;
-    /* 1.75x body copy size = 28px */
-    line-height: 1.25;
-    margin-top: 1.37500001em;
-    /* (22px / 24px) * 1.5 */
-    margin-bottom: 0.45833334em;
-    /* (22px / 24px) * .5 */
-    max-width: 21.71429em;
-  }
-}
-.wf-inactive h3 {
-  font-size: 1.375em;
-  letter-spacing: normal;
-  line-height: 1.13636364;
-}
-@media (min-width: 44em) {
-  .wf-inactive h3 {
-    font-size: 1.5em;
-    letter-spacing: normal;
-    line-height: 1.25;
-  }
-}
-@media (min-width: 58em) {
-  .wf-inactive h3 {
-    font-size: 1.75em;
-    letter-spacing: normal;
-    line-height: 1.25;
-  }
-}
-
-h4 {
-  font-size: 1.125em;
-  /* 1.125x body copy size = 18px */
-  line-height: 1.11111111;
-  margin-top: 1.66666667em;
-  /* (20px / 18px) * 1.5 */
-  margin-bottom: 0.55555556em;
-  /* (20px / 18px) * .5 */
-}
-@media (min-width: 44em) {
-  h4 {
-    line-height: 1.22222222;
-    /* (22px / 18px */
-    margin-top: 1.83333333em;
-    /* (22px / 18px) * 1.5 */
-    margin-bottom: 0.61111111em;
-    /* (22px / 18px) * .5 */
-    max-width: 32em;
-  }
-}
-@media (min-width: 58em) {
-  h4 {
-    max-width: 33.77778em;
-  }
-}
-
-header h1 {
-	font-style: italic;
-	margin: 0.25em 0; 
-	line-height: 1.25em;
-	font-size: 2.25em;
-}
-@media (min-width: 44em) {
-  header h1 {
-    font-size: 2.5em;
-    max-width: inherit;
-  }
-}
-@media (min-width: 58em) {
-  header h1 {
-    font-size: 3.5em;
-  }
-}
-
-
-
-.font-scale-inactive h1 {
-  font-size: 3em;
-}
-
-.font-scale-inactive h2 {
-  font-size: 2.25em;
-}
-
-.font-scale-inactive h3 {
-  font-size: 1.75em;
-}
-
-.font-scale-inactive h4 {
-  font-size: 1.125em;
-}
-
-.font-scale-inactive header h1 {
-  font-size: 5em;
-}
-
-/* END PROPORTION styles */
-
-/* POLISH styles */
-
-/* OTF features */
-h1 {
-	-moz-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-moz-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-webkit-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-ms-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-o-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-}
-
-h2 {
-	-moz-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-moz-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-webkit-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-ms-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-o-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-}
-
-h3 {
-	-moz-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-moz-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-webkit-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-ms-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-o-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-}
-
-p {
-	-moz-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-moz-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-webkit-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-ms-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-o-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-}
-
-blockquote {
-	-moz-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-moz-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-webkit-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	-ms-font-feature-settings: "calt=1", "clig=1", "dlig=1", "kern=1", "liga=1", "salt=1";
-	-o-font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-	font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-}
-
-/* reset type when OTF are inactive */
-.otf-inactive h1, 
-.otf-inactive h2, 
-.otf-inactive h3, 
-.otf-inactive p, 
-.otf-inactive blockquote {
-	-moz-font-feature-settings: "calt=0", "clig=0", "dlig=0", "kern=0", "liga=0", "salt=0";
-	-moz-font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
-	-webkit-font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
-	-ms-font-feature-settings: "calt=0", "clig=0", "dlig=0", "kern=0", "liga=0", "salt=0";
-	-o-font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
-	font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
-}
-
-/* Initial Cap styles */
-#main-content p:first-of-type:first-letter {
-	font-size: 3em; 
-	font-family: "Playfair Display", Georgia, "Times New Roman";
-	line-height: 0.9em; 
-	float: left; 
-	padding-right: 0.15em; 
-	
-}
-
-.lt-ie9 #main-content h1 + p:first-letter {
-    font-size: 3em; 
-    font-family: "Playfair Display", Georgia, "Times New Roman";
-	line-height: 0.9em; 
-	float: left; 
-	padding-right: 0.15em; 	
-}
-
-.otf-inactive #main-content p:first-of-type:first-letter {
-	font-size: inherit; 
-	font-family: inherit;
-	line-height: inherit; 
-	float: inherit; 
-	padding-right: inherit; 
-	
-}
-
-.otf-inactive.lt-ie9 #main-content h1 + p:first-letter {
-	font-size: inherit; 
-	font-family: inherit;
-	line-height: inherit; 
-	float: inherit; 
-	padding-right: inherit; 
-}
-
-/* COLUMN SPLIT styles */
-
-@media screen and (min-width: 44em) {  /* 928px / 16px = 58em */
-	.otf-active .columns {
-	    margin: 0 -5% 1em -8%;
-	    width: 105%;
-	    max-width: 110%;
-	    -webkit-columns: 2;
-	    -moz-columns: 2;
-	    -ms-columns: 2;
-	    -o-columns: 2;
-	    columns: 2;
-	    -webkit-column-gap: 3.3898305%;
-	    -moz-column-gap: 3.3898305%;
-	    -ms-column-gap: 3.3898305%;
-	    -o-column-gap: 3.3898305%;
-	    column-gap: 3.3898305%;
-	}
-}
-@media screen and (min-width: 58em) {  /* 928px / 16px = 58em */
-	.otf-active .columns {
-	    margin: 0 -5% 1em -5%;
-	    width: 105%;
-	}
-}
-@media screen and (min-width: 80.0625em) {  /* 928px / 16px = 58em */
-	.otf-active .columns {
-	    margin: 0 -5% 1em -6.5%;
-	    width: 110%;
-	}
-}
-
-/* END COLUMN SPLIT styles */
-
-/* END POLISH styles */
-
 
 @media screen and (min-width: 44em) { /* 704px / 16px = 44em */
 	

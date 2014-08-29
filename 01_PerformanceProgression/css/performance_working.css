@@ -1,0 +1,564 @@
+/*
+ * HTML5 Boilerplate
+ *
+ */
+
+/* Helpers */
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+/* apply a natural box layout model to all elements */
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	*behavior: url(../../assets/htc/boxsizing.htc);
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+.button {
+  font-size: 14px;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #383838;
+  background-color: #fefafa;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ede9e9));
+  background-image: -webkit-linear-gradient(#ffffff, #ede9e9);
+  background-image: -moz-linear-gradient(#ffffff, #ede9e9);
+  background-image: -o-linear-gradient(#ffffff, #ede9e9);
+  background-image: linear-gradient(#ffffff, #ede9e9);
+  padding: 0.25em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.button:hover {
+  background-color: #e4e1e1;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefafa), color-stop(100%, #cbc7c7));
+  background-image: -webkit-linear-gradient(#fefafa, #cbc7c7);
+  background-image: -moz-linear-gradient(#fefafa, #cbc7c7);
+  background-image: -o-linear-gradient(#fefafa, #cbc7c7);
+  background-image: linear-gradient(#fefafa, #cbc7c7);
+}
+
+
+.toggle-fonts {
+  position: fixed; 
+  top: 0.5em; 
+  right: 8em; 
+  z-index: 999;
+}
+@media (min-width: 30em) {
+	.toggle-fonts {
+	    right: 0.5em; 
+	}
+}
+.toggle-font-correction {
+  position: fixed; 
+  top: 0.5em; 
+  right: 0.5em; 
+  z-index: 999;
+}
+@media (min-width: 30em) {
+	.toggle-font-correction {
+	    top: 2.75em; 
+	}
+}
+.toggle-fonts.on:after, 
+.toggle-font-correction.on:after {
+  content: ": on";
+}
+.toggle-fonts.off:after, 
+.toggle-font-correction.off:after {
+  content: ": off";
+}
+
+
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.4; 
+	background: #f1f1f1; 
+	margin: 0; 
+	padding: 0 0 2em 0; 
+}
+
+#page {
+	font-size: 1em; /* 16px = 1em */
+	margin: 0 auto; 
+	border-radius: 0 0 1em 1em;
+	box-shadow: 0 0 20px rgba(50, 50, 50, .5);  
+	overflow: hidden;
+
+}
+
+header {
+	background: #d1d1d1; 
+	background-size: 100%;
+}
+
+
+#main {
+	margin: 0;
+	padding: 0 0 1em 0; 
+	background: #f5f5f5;
+	background: rgba(245, 245, 245, 80); 
+}
+
+#content {
+	background-color: #f5f5f5;
+}
+
+footer {
+	background-color: #a1b1c1;
+	color: #fff; 
+}
+
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset {
+	font-family: "Fira Sans", helvetica, arial, sans-serif;	
+}
+
+h1 {
+	font-family: "Merriweather", Georgia; 
+	font-weight: 900;
+	font-size: 3em;
+	margin: 0.6667em 0 0.33333em 0; /* 24px above, 16px below */
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+}
+
+h2 {
+	font-family: "Merriweather", Georgia; 
+	font-weight: 700;
+	margin: 0.75em 0 0.5em 0; /* 20px above, 16px below */
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+}
+
+h3 {
+	font-family: "Merriweather", Georgia; 
+	font-weight: 700;
+	margin: 1em 0 0.66667em 0; /* 24px above, 16px below */
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5); 
+	margin-bottom: 0;
+}
+
+header h1 {
+	font-style: italic;
+	margin: 0.25em 0; 
+	line-height: 1.25em;
+	font-size: 5em;
+}
+
+
+
+a { 
+	-webkit-transition: background 0.3s ease-in-out; 
+	-moz-transition: background 0.3s ease-in-out; 
+	-o-transition: background 0.3s ease-in-out; 
+	transition: background 0.3s ease-in-out;	
+}
+
+
+/* NAV bits */
+
+@media screen and (min-width: 44em) { 
+	#menu-link { 
+		display: none; 
+		visibility: hidden;
+		position: absolute; 
+		left: -999em;
+	}
+}
+
+nav .menu {
+	background-color: #a1a1a1; 
+	position: relative;
+	list-style: none; 
+	list-style-image: none; 
+	margin: 0; 
+	padding: 0; 
+	text-align: center;
+}
+
+nav > .menu li {
+	position: relative;
+}
+
+nav .menu li { 
+	list-style: none; 
+	list-style-image: none; 
+	display: inline-block; 
+	margin: 0; 
+	padding: 0;
+}
+
+nav .menu li a {
+	font-family: "Fira Sans", sans-serif; 
+	font-weight: bold; 
+	font-size: 1.125em;
+	padding: .5em 1em; 
+	margin-top: 0;
+	background-color: #a1b1c1; 
+	color: white; 
+	display: block; 
+	text-decoration: none;
+}
+
+nav .menu li a:hover {
+	color: #f1f1f1; 
+	background-color: #1f1f1f;
+}
+
+nav > .menu li ul {
+	display: none;
+	margin: 0.25em; 
+	padding: 0 0 0 1em;
+	width: 100%;
+}
+@media (min-width: 44em) {
+	nav ul.menu {
+		background-color: #a1b1c1; 
+	}
+	
+	nav ul.menu li a {
+	  	margin-top: 0;
+	  	border-radius: 0 0 0 0;
+	}
+
+	nav > .menu .over ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+		position: absolute; 
+		top: 2.5em; 
+		left: 0em; 
+		width: 12em;
+		text-align: left;
+		z-index: 999;
+	}
+	
+	nav > .menu .over ul li {
+		display: block;
+	}
+	
+	nav > .menu .over ul a {
+		width: 100%; 
+		display: block;
+	}	
+}
+
+/* END NAV styles */
+
+/* FOOTER styles */
+footer p {
+	font-size: 0.875em;  /* 14px / 16px = .875em */
+	line-height: 1.5em;
+	margin-top: 0.25em;
+	float: left;
+}
+
+footer ul.menu {
+	list-style: none; 
+	list-style-image: none; 
+	margin: 0; 
+	padding: 0; 
+	float: left;
+}
+
+footer ul.menu li { 
+	font-size: 0.875em; /* 14px / 16px = .875em */
+	list-style: none; 
+	list-style-image: none; 
+	display: inline-block; 
+	margin: 0 .5em 0 0; 
+	padding: 0 .75em 0 0; 
+	border-right: solid 1px #fff;
+}
+
+footer ul.menu li a {
+	color: white; 
+	display: block; 
+	text-decoration: none;
+}
+
+footer ul.menu li a:hover {
+	color: #f1f1f1; 
+	text-decoration: underline;
+}
+
+/* end FOOTER styles */
+
+.daterange {
+	font-size: .875em; /* 14px / 16px = .875em */
+}
+
+
+/* comments */
+
+#comments h2 {
+	font-size: 1.75em;
+}
+
+#comments p {
+	margin-top: 0;
+}
+
+#comments em.source {
+	font-size: .75em; 
+	color: #a1a1a1; 
+	display: block;
+	margin-bottom: .5em;
+}
+
+/* figures generic styles */
+
+figure.small {
+	width: 29.661017%; /* (175px / 590px) = 29.661017% */
+	margin-bottom: 1em;
+}
+
+figure.medium {
+	width: 48.305085%; /* (285px / 590px) = 48.305085% */
+	margin-bottom: 1em;
+}
+
+figure.left {
+	float: left; 
+	margin-right: 3.3898305%; /* (20px / 590px) = 3.3898305% */
+}
+
+figure.right {
+	float: right; 
+	margin-left: 3.3898305%; /* (20px / 590px) = 3.3898305% */
+}
+
+figcaption {
+	font-size: .75em; 
+	font-style: italic;
+}
+
+
+/* Blockquote styles */
+
+blockquote {
+	width: 86.440678%; /* 510px / 590px = 86.440678% */
+	margin: 0 auto 1em auto; 
+	font-size: 1.5em; 
+	line-height: 1.4em; 
+	font-family: "Merriweather", Georgia, "Times New Roman"; 
+	font-style: italic; 
+	font-weight: 700;
+	position: relative;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 2em;
+	color: #9f9f9f;
+	position: absolute;
+	top: 0;
+	left: -0.5em;
+    
+}
+
+blockquote:after {
+	content: "\201D";
+	font-size: 2em;
+	color: #9f9f9f;
+	position: relative;
+	bottom: -0.2em;
+	right: 0; 
+	display: inline;
+    line-height: .2em;
+}
+@media screen and (min-width: 44em) { /* 704px / 16px = 44em */
+	
+	blockquote {
+		font-size: 1.5em; /* 24px / 16px = */
+		width: 48.305085%; /* 285px / 590px = 48.305085% */
+		margin: 0 0 1em 0; 
+	}
+	
+	blockquote.left {
+		float: left; 
+		margin-right: 3.3898305%; /* 20px / 590px = 3.3898305% */
+		margin-left: -2em;
+		padding-left: 1em;
+	}
+	
+	blockquote.right {
+		float: right; 
+		margin-left: 3.3898305%; /* 20px / 590px = 3.3898305% */
+		margin-right: -2em;
+		padding-right: 1em;
+	}
+	
+	blockquote:before {
+		left: -0.1em;
+	    
+	}
+
+}/* /mediaquery */
+
+/* END BLOCKQUOTE styles */
+
+/* image styles */
+
+img {
+	width: 100%; 
+	max-width: 100%; 
+	height: auto; 
+	display: block;
+}
+
+/* IE bits */
+
+.lt-ie7 #page {
+	font-size: 1em; /* IE6 Renders type REALLY big */
+}
+
+.lt-ie8 nav ul.menu {
+	background-color: #a1b1c1; 
+	width: 100%;
+}
+
+.lt-ie8 nav ul.menu li {
+	float: left;
+}
+
+.lt-ie8 footer ul.menu li {
+	float: left; 
+	display: block; 
+	margin-top: 1em;
+}
+
+.lt-ie7 #content-inner {
+	padding: 1em 2.85714286%; 
+}
+
+.lt-ie9 img { /* fix image bits for older IE */
+  	height: auto !important; 
+  	width: auto\9; /* IE 8 */
+}
+@media screen and (min-width: 44em) { /* 704px / 16px = 44em */
+
+	/* IE bits */
+	
+	.lt-ie7 #main {
+		position: relative; 
+	}
+	
+	.lt-ie7 #main nav {
+		position: absolute; 
+		left: 0;
+	}
+	
+	.lt-ie7 #main #sidebar-first {
+		position: absolute; 
+		left: 0;
+	}
+	
+	.lt-ie7 #main #sidebar-first-inner {
+		padding-left: 3.3333335%;
+	}
+	
+	.lt-ie7 #main #content {
+		position: relative; 
+		margin-left: 15%;
+	}
+	
+	.lt-ie7 figure img {
+		width: 100% !important; 
+	}
+  
+}/* /mediaquery */
+
+@media screen and (min-width: 80.0625em) {  /* 1281px / 16px = 80.0625em */
+
+	/* IE bits */
+	
+	.lt-ie7 #content {
+		padding: 1em 2% !important;
+	}
+	  
+	.lt-ie7 #content {
+		margin-left: 0; 
+		width: 70% !important;
+	}
+	  
+	.lt-ie7 #content #comments {
+		padding-top: 2em;
+	}
+
+}/* /mediaquery */
+
+/* END IE styles */
+
+
+
+
+@media screen and (min-width: 44em) { /* 704px / 16px = 44em */
+	
+}/* /mediaquery */
+
+@media screen and (min-width: 58em) {  /* 928px / 16px = 58em */
+
+}/* /mediaquery */
+
+@media screen and (min-width: 80.0625em) {  /* 1281px / 16px = 80.0625em */
+
+}/* /mediaquery */
+
+
+/* the following media query is a fix for a bug in older iOS devices on rotation */
+@media screen and (orientation:landscape) and (device-width:320px) and (device-height: 480px) {
+	body {
+		width: 480px;
+	}
+}
+
+
