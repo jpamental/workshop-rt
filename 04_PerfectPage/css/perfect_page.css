@@ -156,12 +156,11 @@ body {
 #main {
 	margin: 0;
 	padding: 0 0 1em 0; 
-	background: #f5f5f5;
-	background: rgba(245, 245, 245, 80); 
+	background: #fff; 
 }
 
 #content {
-	background-color: #f5f5f5;
+	background-color: #fff;
 }
 
 #page > footer {
@@ -1084,7 +1083,7 @@ blockquote {
 	line-height: 1;
 	position: relative;
 	z-index: 1;
-	background-color: #f5f5f5;
+	background-color: #fff;
 }
 @media screen and (min-width: 44em) { 
 	.title .first-line {

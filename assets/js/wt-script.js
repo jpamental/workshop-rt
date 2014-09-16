@@ -8,7 +8,7 @@ wt.fix({
 
 wt.fix({
 	elements: 'blockquote',
-	chars: 8,
+	chars: 2,
 	method: 'nbsp',
 	event: 'resize'
 });
