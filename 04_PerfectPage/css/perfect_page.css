@@ -185,6 +185,7 @@ h1 {
 h2 {
 	font-family: "Playfair Display", Georgia; 
 	font-weight: 700;
+	font-style: italic;
 	margin: 0.75em 0 0.5em 0; /* 20px above, 16px below */
 	color: #555; 
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
@@ -966,6 +967,15 @@ blockquote {
 	font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
 }
 
+/* remove OTF features when desired */
+.otf-off {
+	-moz-font-feature-settings: "calt=0", "clig=0", "dlig=0", "kern=0", "liga=0", "salt=0";
+	-moz-font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
+	-webkit-font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
+	-ms-font-feature-settings: "calt=0", "clig=0", "dlig=0", "kern=0", "liga=0", "salt=0";
+	-o-font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
+	font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "kern" 0, "liga" 0, "salt" 0;
+}
 /* Intro Paragraph style */
 #main-content p:first-of-type {
 	font-size: 1.125em; 
