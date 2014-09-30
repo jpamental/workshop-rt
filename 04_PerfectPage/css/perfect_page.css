@@ -171,6 +171,7 @@ body {
 
 body, caption, th, td, input, textarea, select, option, legend, fieldset {
 	font-family: "Fira Sans", helvetica, arial, sans-serif;	
+	font-family: "Merriweather", Georgia; 
 }
 
 h1 {
@@ -1116,6 +1117,7 @@ blockquote {
 
 .subhead {
 	text-transform: uppercase; 
+	font-family: Playfair, Georgia;
 	font-size: 0.75em;
 	text-align: center;
 	margin-top: 0;
@@ -1128,7 +1130,7 @@ blockquote {
 
 @media screen and (min-width: 58em) {  
 	.subhead {
-		font-size: 0.9em;
+		font-size: 0.8em;
 	}
 }/* /mediaquery */
 

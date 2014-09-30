@@ -48,6 +48,117 @@
     <body>
         <div id="page">
         	<header role="banner" class="clearfix">
+        		<!-- BEGIN web font toggle -->
+        		<a href="#" class="toggle-fonts button on">Web Fonts</a>
+        		<a href="#" class="toggle-font-correction button on">Correction</a>
+				<style>
+					.button {
+					  font-size: 14px;
+					  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+					  text-decoration: none;
+					  font-weight: bold;
+					  color: #383838;
+					  background-color: #fefafa;
+					  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ede9e9));
+					  background-image: -webkit-linear-gradient(#ffffff, #ede9e9);
+					  background-image: -moz-linear-gradient(#ffffff, #ede9e9);
+					  background-image: -o-linear-gradient(#ffffff, #ede9e9);
+					  background-image: linear-gradient(#ffffff, #ede9e9);
+					  padding: 0.25em;
+					  -webkit-border-radius: 0.5em;
+					  -moz-border-radius: 0.5em;
+					  -ms-border-radius: 0.5em;
+					  -o-border-radius: 0.5em;
+					  border-radius: 0.5em;
+					  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+					  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+					  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+					}
+					.button:hover {
+					  background-color: #e4e1e1;
+					  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefafa), color-stop(100%, #cbc7c7));
+					  background-image: -webkit-linear-gradient(#fefafa, #cbc7c7);
+					  background-image: -moz-linear-gradient(#fefafa, #cbc7c7);
+					  background-image: -o-linear-gradient(#fefafa, #cbc7c7);
+					  background-image: linear-gradient(#fefafa, #cbc7c7);
+					}
+					.toggle-fonts {
+					  position: fixed; 
+					  top: 0.5em; 
+					  right: 8em; 
+					  z-index: 999;
+					}
+					@media (min-width: 30em) {
+						.toggle-fonts {
+						    right: 0.5em; 
+						}
+					}
+					.toggle-font-correction {
+					  position: fixed; 
+					  top: 0.5em; 
+					  right: 0.5em; 
+					  z-index: 999;
+					}
+					@media (min-width: 30em) {
+						.toggle-font-correction {
+						    top: 2.75em; 
+						}
+					}
+					.toggle-fonts.on:after, 
+					.toggle-font-correction.on:after {
+					  content: ": on";
+					}
+					.toggle-fonts.off:after, 
+					.toggle-font-correction.off:after {
+					  content: ": off";
+					}
+				</style>
+				
+				<script type="text/javascript">
+					// Typographic scale toggle function
+					$(document).ready(function(e) {
+						// Type scale toggle button
+						$(".toggle-scale").click(function(){
+							$("html").toggleClass("font-scale-active font-scale-inactive");
+							$(this).toggleClass("on off");
+						});
+						// Type fonts toggle button
+						$(".toggle-fonts").click(function(e){
+							e.preventDefault();
+							if($("html").hasClass("wf-active")) {
+								$("html").removeClass("wf-active");
+								$("html").addClass("wf-inactive");
+								$(this).removeClass("on");
+								$(this).addClass("off");
+							} else {
+								$("html").removeClass("wf-inactive");
+								$("html").addClass("wf-active");
+								$(this).removeClass("off");
+								$(this).addClass("on");
+								// reset correction
+								$("html").addClass("corrected");
+								$(".toggle-font-correction").removeClass("off");
+								$(".toggle-font-correction").addClass("on");
+							}
+						});
+						// Type font correction toggle button
+						$(".toggle-font-correction").click(function(e){
+							e.preventDefault();
+							if($("html").hasClass("corrected")) {
+								$("html").removeClass("corrected");
+								$(this).removeClass("on");
+								$(this).addClass("off");
+							} else {
+								$("html").addClass("corrected");
+								$(this).removeClass("off");
+								$(this).addClass("on");
+							}
+						});
+					});
+
+
+				</script>
+        		<!-- END web font toggle -->
         		<h2>An Attempt at a Perfect Page</h2>
         	</header>
         	<div id="main" class="clearfix">
@@ -57,7 +168,7 @@
         				<header>
         				<em class="date">September 2014</em>
 						<h1 class="title"><span class="first-line">Out to Lunch With </span>Livia Firth</h1>
-						<h2 class="subhead otf-off">Married to everyone’s idea of Mr. Darcy, the eco-fashion activist is no Austen heroine.</h2>
+						<h2 class="subhead">Married to everyone’s idea of Mr. Darcy, the eco-fashion activist is no Austen heroine.</h2>
         				</header>
 						<footer><span class="author"><label>By</label> John Heilpern</span></footer>
 						<div class="article-text">
@@ -78,7 +189,7 @@
 						<p>But she’s deadly earnest about the crusading cause and hot topic in fashion that was provoked by the 2013 catastrophe in Bangladesh when the eight-story Rana Plaza garment factory collapsed and killed more than 1,100 people—predominantly women. (Thousands more were injured.)</p>
 						<p>Four years before the tragedy, Firth, an Oxfam global ambassador, had visited the garment workers in Bangladesh and saw for herself the perilous working conditions. She reminds us that there are an estimated four million garment workers in Bangladesh alone, and the factories they toil in supply the West with our “fast fashion”—the affordable clothes and knockoffs we buy in Main Street mega-stores.</p>
 						<p>“The system is no longer acceptable since Rana Plaza,” she said. “The Third World factories are basically using slave labor.”</p>
-						<p>If so, how is the system to be changed? “How do you eat an elephant?” she replied. “Well! I’m patient. Rome wasn’t built in a day.” (She was born in Rome.) But there is at least a new awareness of what’s at stake. She singled out the pioneering example of François-Henri Pinault, C.E.O. of the luxury conglomerate Kering (Gucci, Bottega Veneta, Stella McCartney), who has invested many millions in creating eco-friendly brands.
+						<p>If so, how is the system to be changed? “How do you eat an elephant?” she replied. “Well! I’m patient. Rome wasn’t built in a day.” (She was born in Rome.) But there is at least a new awareness of what’s at stake. She singled out the pioneering example of François-Henri Pinault, C.E.O. of the luxury conglomerate Kering (Gucci, Bottega Veneta, Stella McCartney), who has invested many millions in creating eco-friendly&nbsp;brands.
         				</p>
 						</div>
         				</article>
